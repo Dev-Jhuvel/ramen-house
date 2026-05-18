@@ -42,7 +42,7 @@ export default function Contacts() {
             </div>
           </div>
         </div>
-        <div className="h-30">
+        <div className="h-30 flex items-center justify-center">
            <h3
             className="font-bold text-center text-white text-[clamp(80px,15vw,350px)] text-shadow-md text-shadow-black my-2"
             // data-aos="fade-up"

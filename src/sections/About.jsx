@@ -21,14 +21,17 @@ export default function About() {
         <h1 className="text-center text-lg pt-15">About Us</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-y-20 w-full py-4">
           <div
+            className="relative size-full overflow-hidden rounded-2xl"
             data-aos={isDesktop ? "fade-right" : animation}
             data-aos-delay={1000}
           >
-            <ImageHover
-              image={restaurantClosed}
-              imageHover={restaurant}
-              alt="restaurant-photo"
-            />
+            <figure className="size-full">
+              <ImageHover
+                image={restaurantClosed}
+                imageHover={restaurant}
+                alt="restaurant-photo"
+              />
+            </figure>
           </div>
           <div className="sm:p-5">
             <h3
@@ -119,12 +122,14 @@ export default function About() {
               <strong> craving to come back</strong>.
             </p>
           </div>
-          <div>
-            <ImageHover
-              image={chef}
-              imageHover={chefSmiling}
-              alt="restaurant-photo"
-            />
+          <div className="relative size-full overflow-hidden rounded-2xl">
+            <figure className="size-full">
+              <ImageHover
+                image={chef}
+                imageHover={chefSmiling}
+                alt="restaurant-photo"
+              />
+            </figure>
           </div>
         </div>
       </div>

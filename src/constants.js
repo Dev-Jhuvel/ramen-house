@@ -102,7 +102,7 @@ export const products = [
     price: "405.00",
     description:
       "Sesame paste ramen with ground pork, tamago, and vegetables.",
-    tags: ["ramen", "sesame", "ground pork"],
+    tags: ["ramen", "sesame", "pork"],
     category: "Main",
     subCategory: "Ramen",
     badge: null,
@@ -176,7 +176,7 @@ export const products = [
     price: "285.00",
     description:
       "Chicken based creamy broth with chicken chashu, leeks, tamago, black garlic oil, and chili.",
-    tags: ["ramen", "black garlic", "chicken"],
+    tags: ["ramen", "garlic", "chicken"],
     category: "Main",
     subCategory: "Tori Ramen",
     badge: null,

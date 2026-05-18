@@ -17,7 +17,7 @@ export default function Products() {
   return (
     <section id="products" className="min-h-screen w-full">
       <div className="flex flex-col bg-blend-overlay bg-red-500/30">
-        <div className="container mx-auto  pt-6 pb-13 h-full">
+        <div className="container mx-auto pt-6 pb-13 h-full">
           <div className="flex flex-col sm:flex-row justify-center sm:justify-between item-center w-full px-10 pt-16">
             <h1 className="text-center text-lg !pt-0">Our Menu</h1> 
             <div className="flex justify-center items-center pb-5 sm:pb-0">

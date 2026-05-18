@@ -6,7 +6,7 @@ export default function ImageHover({image, imageHover, alt}) {
   return (
    <img
       src={img}
-      className="size-full transition duration-500 ease-in-out rounded-2xl cursor-pointer"
+      className="size-full transition duration-500 ease-in-out rounded-2xl cursor-pointer object-cover object-center"
       alt={alt}
       onMouseOver={()=>setIsHover(true)}
       onMouseOut={()=>setIsHover(false)}

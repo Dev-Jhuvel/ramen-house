@@ -6,7 +6,7 @@ export default function ProductCard({ product, once = false }) {
   return (
     <div
       id="card"
-      className="border bg-black w-full p-5 rounded-2xl transition-transform duration-500 ease-in-out hover:scale-106 shadow-2xl hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] hover:bg-gray-500/50 relative"
+      className="border bg-black w-full p-3 pt-1 rounded-2xl transition-transform duration-500 ease-in-out hover:scale-106 shadow-2xl hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] hover:bg-gray-500/50 relative"
       data-aos="fade-right"
       data-aos-once={once}
       data-aos-delay={500}
@@ -34,7 +34,7 @@ export default function ProductCard({ product, once = false }) {
           </h3>
         </div>
         <div className="py-2 h-24 sm:h-auto">
-          <p className="text-sm sm:text-base text-gray-300 line-clamp-3">
+          <p className="text-sm sm:text-base leading-tight text-gray-300 line-clamp-3">
             {product.description}
           </p>
         </div>
