@@ -2,35 +2,39 @@ import ramen from "../images/products/ramen.png";
 
 export default function ProductCard({ product, once = false }) {
   const fontSize = product.name.length > 17 ? "sm:text-sm" : "sm:text-lg";
-  
+
   return (
     <div
       id="card"
-      className="border bg-black w-full p-3 rounded-2xl transition-transform duration-500 ease-in-out hover:scale-106 shadow-2xl hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] hover:bg-gray-500/50"
+      className="border bg-black w-full p-5 rounded-2xl transition-transform duration-500 ease-in-out hover:scale-106 shadow-2xl hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] hover:bg-gray-500/50 relative"
       data-aos="fade-right"
       data-aos-once={once}
       data-aos-delay={500}
     >
+      {product.badge && (
+        <div className="absolute bg-red-500 rounded-full size-14 right-[-5px] top-[-4px] border-t-2">
+          <span className="text-[7pt] sm:text-[8pt] font-semibold size-full px-1 text-center flex justify-center items-center">
+            {product.badge}
+          </span>
+        </div>
+      )}
       <div className="flex justify-center">
         <figure>
           <img
             className="size-full md:max-w-55"
             src={product.image ?? ramen}
-            alt=""
+            alt="product-image"
           />
         </figure>
       </div>
       <div className="flex flex-col h-auto sm:h-45">
         <div className="text-left flex justify-between items-center h-13 sm:h-auto">
-          <h3 className={`text-[clamp(12pt,5vw,20pt)] font-bold`}>{product.name}</h3>
-          {product.badge && (
-            <span className="text-[clamp(8pt,5vw,12pt)] bg-red-500 px-2 py-1 rounded-2xl">
-              {product.badge}
-            </span>
-          )}
+          <h3 className={`text-lg sm:text-xl font-bold leading-tight`}>
+            {product.name}
+          </h3>
         </div>
         <div className="py-2 h-24 sm:h-auto">
-          <p className="text-[clamp(8pt,4vw,14pt)] sm:text-sm">
+          <p className="text-sm sm:text-base text-gray-300 line-clamp-3">
             {product.description}
           </p>
         </div>
@@ -42,7 +46,7 @@ export default function ProductCard({ product, once = false }) {
                 return (
                   <span
                     key={key}
-                    className={`text-[clamp(7pt,5vw,12pt)] ${colorMap[key]} px-2 py-1 rounded-2xl`}
+                    className={`text-xs sm:text-sm ${colorMap[key]} px-2 py-1 rounded-2xl`}
                   >
                     {tag}
                   </span>
@@ -50,7 +54,7 @@ export default function ProductCard({ product, once = false }) {
               })}
           </div>
           <div className="mt-3">
-            <span className="text-[clamp(16pt,3vw,18pt)] font-bold bg-red-300/10 px-2 py-1 rounded-2xl">
+            <span className="block mt-3 text-sm sm:text-base font-semibold">
               ${product.price}
             </span>
           </div>
