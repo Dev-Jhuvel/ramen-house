@@ -17,7 +17,7 @@ export default function ProductCard({ product, once = false }) {
         </div>
       )}
       <div className="flex justify-center relative overflow-hidden border-b">
-        <figure className="aspect-[4/3] overflow-hidden">
+        <figure className="aspect-square overflow-hidden">
           <img
             className="size-full max-w-50 object-cover object-center"
             src={product.image ?? ramen}
@@ -25,7 +25,7 @@ export default function ProductCard({ product, once = false }) {
           />
         </figure>
       </div>
-      <div className="flex flex-col px-4 py-2 h-50">
+      <div className="flex flex-col px-4 py-2 h-full">
         <div className="text-left flex flex-col gap-1">
           <h3 className={`text-lg sm:text-2xl font-bold leading-tight`}>
             {product.name}
