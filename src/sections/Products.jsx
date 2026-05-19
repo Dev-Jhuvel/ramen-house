@@ -24,10 +24,10 @@ export default function Products() {
               <Link to="/menu" className="bg-red-500 text-sm sm:text-base py-2 font-bold px-4 rounded-sm hover:bg-red-400">VIEW ALL MENU</Link>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:px-4 py-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:px-4 py-3 h-full">
            {Object.entries(groupedProducts).map(([category, subCats]) => (
             category == "Main" && Object.entries(subCats).slice(0,4).map(([subCategory, items]) => (
-              <div className="flex justify-center items-center">
+              <div className="flex justify-center items-start border">
                 <ProductCard key={subCategory} product={items[0]} />
               </div>
             ))

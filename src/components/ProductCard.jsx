@@ -2,7 +2,7 @@ export default function ProductCard({ product, once = false }) {
   return (
     <div
       id="card"
-      className="border bg-black w-full rounded-2xl transition-transform duration-500 ease-in-out hover:scale-106 shadow-2xl hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] hover:bg-gray-500/50 relative max-w-76 max-h-90 group"
+      className="border bg-black w-full rounded-2xl transition-transform duration-500 ease-in-out hover:scale-106 shadow-2xl hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] hover:bg-gray-500/50 relative max-w-76 h-full group"
       // data-aos="fade-right"
       data-aos-once={once}
       data-aos-delay={500}
@@ -14,7 +14,7 @@ export default function ProductCard({ product, once = false }) {
           </span>
         </div>
       )}
-      <div className="flex justify-center relative overflow-hidden border-b">
+      <div className="flex justify-center relative overflow-hidden border-b h-[55%]">
         <figure className="aspect-square overflow-hidden">
           <img
             className="size-full max-w-50 object-cover object-center"
@@ -23,7 +23,7 @@ export default function ProductCard({ product, once = false }) {
           />
         </figure>
       </div>
-      <div className="flex flex-col px-4 py-2 h-full">
+      <div className="flex flex-col px-4 py-2 h-[45%]">
         <div className="text-left flex flex-col gap-1">
           <h3 className={`text-lg sm:text-xl font-bold leading-tight`}>
             {product.name}
@@ -49,7 +49,7 @@ export default function ProductCard({ product, once = false }) {
           </div>
           <div className="mt-3">
             <span className="block mt-3 text-sm sm:text-base font-semibold">
-              ${product.price}
+              ₱{product.price}
             </span>
           </div>
         </div>
