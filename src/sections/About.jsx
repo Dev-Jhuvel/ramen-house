@@ -1,7 +1,3 @@
-import restaurant from "../images/about/restaurant.png";
-import restaurantClosed from "../images/about/restaurantClosed.png";
-import chef from "../images/about/chef.png";
-import chefSmiling from "../images/about/chefSmiling.png";
 import ImageHover from "../components/ImageHover";
 import {
   BadgeCheck,
@@ -27,8 +23,8 @@ export default function About() {
           >
             <figure className="size-full">
               <ImageHover
-                image={restaurantClosed}
-                imageHover={restaurant}
+                image="/images/about/restaurantClosed.png"
+                imageHover="/images/about/restaurant.png"
                 alt="restaurant-photo"
               />
             </figure>
@@ -125,8 +121,8 @@ export default function About() {
           <div className="relative size-full overflow-hidden rounded-2xl">
             <figure className="size-full">
               <ImageHover
-                image={chef}
-                imageHover={chefSmiling}
+                image="/images/about/chef.png"
+                imageHover="/images/about/chefSmiling.png"
                 alt="restaurant-photo"
               />
             </figure>

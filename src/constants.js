@@ -1,27 +1,22 @@
-import ramen from "./images/products/ramen.png";
-import spicyRamen from "./images/products/spicyRamen.png";
-import seafoodRamen from "./images/products/seafoodRamen.png";
-import sushi from "./images/products/sushi.png";
-import takoyaki from "./images/products/takoyaki.png";
-import katsuCurry from "./images/products/katsuCurry.png";
-import profile1 from "./images/profiles/profile_1.png";
-import profile2 from "./images/profiles/profile_2.png";
-import profile3 from "./images/profiles/profile_3.png";
-import profile4 from "./images/profiles/profile_4.png";
-import profile5 from "./images/profiles/profile_5.png";
-
-export const navLinks = ["home", "products", "about_us", "reviews", "contact"]
+export const navLinks = [
+  "home",
+  "products",
+  "about_us",
+  "reviews",
+  "contact",
+];
 
 export const restaurant = {
-  name:         "Ramen House Cavite",
+  name: "Ramen House Cavite",
   phone_number: "+63 962 8871296",
-  email:        "ramenhouse@gmail.com",
-  address:      "456, Raq Blvd. #404, Los Angeles, CA 90210",
-  gmap:         "https://www.google.com/maps?q=1600+Amphitheatre+Parkway,+Mountain+View,+CA",
-  messenger:    "https://m.me/captain.jhuvs",
-  facebook:     "https://facebook.com/captain.jhuvs",
-  instagram:    "https://instagram.com/jhuvel_",
-}
+  email: "ramenhouse@gmail.com",
+  address: "456, Raq Blvd. #404, Los Angeles, CA 90210",
+  gmap:
+    "https://www.google.com/maps?q=1600+Amphitheatre+Parkway,+Mountain+View,+CA",
+  messenger: "https://m.me/captain.jhuvs",
+  facebook: "https://facebook.com/captain.jhuvs",
+  instagram: "https://instagram.com/jhuvel_",
+};
 
 export const products = [
   // RAMEN - Shoyu
@@ -34,7 +29,7 @@ export const products = [
     category: "Main",
     subCategory: "Ramen",
     badge: "All Time Favorite",
-    image: ramen,
+    image: "/images/products/ramen.png",
     available: true,
   },
   {
@@ -46,7 +41,7 @@ export const products = [
     category: "Main",
     subCategory: "Ramen",
     badge: "Best Seller",
-    image: seafoodRamen,
+    image: "/images/products/seafoodRamen.png",
     available: true,
   },
   {
@@ -58,7 +53,7 @@ export const products = [
     category: "Main",
     subCategory: "Ramen",
     badge: "Best Seller",
-    image: spicyRamen,
+    image: "/images/products/spicyRamen.png",
     available: true,
   },
   {
@@ -70,7 +65,7 @@ export const products = [
     category: "Main",
     subCategory: "Ramen",
     badge: null,
-    image: ramen,
+    image: "/images/products/ramen.png",
     available: true,
   },
   {
@@ -82,7 +77,7 @@ export const products = [
     category: "Main",
     subCategory: "Ramen",
     badge: "All Time Favorite",
-    image: ramen,
+    image: "/images/products/ramen.png",
     available: true,
   },
   {
@@ -94,7 +89,7 @@ export const products = [
     category: "Main",
     subCategory: "Ramen",
     badge: "Best Seller",
-    image: spicyRamen,
+    image: "/images/products/spicyRamen.png",
     available: true,
   },
   {
@@ -106,7 +101,7 @@ export const products = [
     category: "Main",
     subCategory: "Ramen",
     badge: null,
-    image: ramen,
+    image: "/images/products/ramen.png",
     available: true,
   },
   {
@@ -118,7 +113,7 @@ export const products = [
     category: "Main",
     subCategory: "Ramen",
     badge: null,
-    image: ramen,
+    image: "/images/products/ramen.png",
     available: true,
   },
   {
@@ -130,7 +125,7 @@ export const products = [
     category: "Main",
     subCategory: "Ramen",
     badge: "Best Seller",
-    image: spicyRamen,
+    image: "/images/products/spicyRamen.png",
     available: true,
   },
 
@@ -144,7 +139,7 @@ export const products = [
     category: "Main",
     subCategory: "Tori Ramen",
     badge: "All Time Favorite",
-    image: seafoodRamen,
+    image: "/images/products/seafoodRamen.png",
     available: true,
   },
   {
@@ -156,7 +151,7 @@ export const products = [
     category: "Main",
     subCategory: "Tori Ramen",
     badge: null,
-    image: seafoodRamen,
+    image: "/images/products/seafoodRamen.png",
     available: true,
   },
   {
@@ -168,7 +163,7 @@ export const products = [
     category: "Main",
     subCategory: "Tori Ramen",
     badge: "Best Seller",
-    image: spicyRamen,
+    image: "/images/products/spicyRamen.png",
     available: true,
   },
   {
@@ -180,7 +175,7 @@ export const products = [
     category: "Main",
     subCategory: "Tori Ramen",
     badge: null,
-    image: ramen,
+    image: "/images/products/ramen.png",
     available: true,
   },
 
@@ -194,7 +189,7 @@ export const products = [
     category: "Main",
     subCategory: "Tsukemen Ramen",
     badge: "All Time Favorite",
-    image: seafoodRamen,
+    image: "/images/products/seafoodRamen.png",
     available: true,
   },
   {
@@ -206,7 +201,7 @@ export const products = [
     category: "Main",
     subCategory: "Tsukemen Ramen",
     badge: "Best Seller",
-    image: ramen,
+    image: "/images/products/ramen.png",
     available: true,
   },
 
@@ -220,7 +215,7 @@ export const products = [
     category: "Main",
     subCategory: "Udon Ramen",
     badge: null,
-    image: ramen,
+    image: "/images/products/ramen.png",
     available: true,
   },
 
@@ -234,7 +229,7 @@ export const products = [
     category: "Main",
     subCategory: "Rice Meal",
     badge: "Best Seller",
-    image: katsuCurry,
+    image: "/images/products/katsuCurry.png",
     available: true,
   },
   {
@@ -246,7 +241,7 @@ export const products = [
     category: "Main",
     subCategory: "Rice Meal",
     badge: "All Time Favorite",
-    image: katsuCurry,
+    image: "/images/products/katsuCurry.png",
     available: true,
   },
 
@@ -260,7 +255,7 @@ export const products = [
     category: "Sides",
     subCategory: "Fried",
     badge: "Best Seller",
-    image: takoyaki,
+    image: "/images/products/takoyaki.png",
     available: true,
   },
   {
@@ -272,7 +267,7 @@ export const products = [
     category: "Sides",
     subCategory: "Fried",
     badge: "All Time Favorite",
-    image: takoyaki,
+    image: "/images/products/takoyaki.png",
     available: true,
   },
   {
@@ -284,7 +279,7 @@ export const products = [
     category: "Sides",
     subCategory: "Fried",
     badge: null,
-    image: takoyaki,
+    image: "/images/products/takoyaki.png",
     available: true,
   },
   {
@@ -296,7 +291,7 @@ export const products = [
     category: "Sides",
     subCategory: "Rice",
     badge: null,
-    image: sushi,
+    image: "/images/products/sushi.png",
     available: true,
   },
 
@@ -304,13 +299,12 @@ export const products = [
   {
     name: "Red Iced Tea",
     price: "58.00",
-    description:
-      "Sweet and refreshing iced tea.",
+    description: "Sweet and refreshing iced tea.",
     tags: ["drink", "tea", "iced"],
     category: "Drinks",
     subCategory: "Beverage",
     badge: "Best Seller",
-    image: ramen,
+    image: "/images/products/ramen.png",
     available: true,
   },
 
@@ -318,13 +312,12 @@ export const products = [
   {
     name: "Ajitsuke Tamago",
     price: "35.00",
-    description:
-      "Seasoned soft-boiled ramen egg.",
+    description: "Seasoned soft-boiled ramen egg.",
     tags: ["addon", "egg"],
     category: "Add Ons",
     subCategory: "Toppings",
     badge: "Best Seller",
-    image: ramen,
+    image: "/images/products/ramen.png",
     available: true,
   },
 ];
@@ -332,8 +325,9 @@ export const products = [
 export const reviews = [
   {
     author: "Jhuvel",
-    text: "The broth was rich and flavorful, with just the right kick of spice. Definitely my go-to comfort food spot!",
-    image: profile1,
+    text:
+      "The broth was rich and flavorful, with just the right kick of spice. Definitely my go-to comfort food spot!",
+    image: "/images/profiles/profile_1.png",
     priority: true,
     bgColor: "bg-blue-400/90",
     profileColor: "bg-orange-500",
@@ -341,8 +335,9 @@ export const reviews = [
   },
   {
     author: "Aya",
-    text: "I loved the seafood ramen! Fresh ingredients and the umami taste really stood out. Highly recommended.",
-    image: profile2,
+    text:
+      "I loved the seafood ramen! Fresh ingredients and the umami taste really stood out. Highly recommended.",
+    image: "/images/profiles/profile_2.png",
     priority: true,
     bgColor: "bg-green-400/90",
     profileColor: "bg-red-500",
@@ -350,8 +345,9 @@ export const reviews = [
   },
   {
     author: "Kenji",
-    text: "The vegetarian ramen surprised me — light yet satisfying. Perfect balance of tofu and greens.",
-    image: profile3,
+    text:
+      "The vegetarian ramen surprised me — light yet satisfying. Perfect balance of tofu and greens.",
+    image: "/images/profiles/profile_3.png",
     priority: false,
     bgColor: "bg-purple-400/90",
     profileColor: "bg-yellow-500",
@@ -359,8 +355,9 @@ export const reviews = [
   },
   {
     author: "Maria",
-    text: "Takoyaki was crispy outside and soft inside, just like in Osaka. Loved the bonito flakes topping!",
-    image: profile4,
+    text:
+      "Takoyaki was crispy outside and soft inside, just like in Osaka. Loved the bonito flakes topping!",
+    image: "/images/profiles/profile_4.png",
     priority: false,
     bgColor: "bg-orange-400/90",
     profileColor: "bg-blue-500",
@@ -368,20 +365,12 @@ export const reviews = [
   },
   {
     author: "David",
-    text: "Katsu curry was hearty and filling. The pork cutlet was perfectly breaded and the curry sauce was rich.",
-    image: profile5,
+    text:
+      "Katsu curry was hearty and filling. The pork cutlet was perfectly breaded and the curry sauce was rich.",
+    image: "/images/profiles/profile_5.png",
     priority: false,
     bgColor: "bg-teal-400/90",
     profileColor: "bg-purple-500",
     rating: 5,
   },
-  // {
-  //   author: "Sakura",
-  //   text: "Matcha cheesecake was divine — creamy, not too sweet, and the matcha flavor was authentic.",
-  //   image: profile6,
-  //   priority: false,
-  //   bgColor: "teal",
-  //   profileColor: "white",
-  //   rating: 5,
-  // },
 ];

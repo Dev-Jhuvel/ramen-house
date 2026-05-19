@@ -1,4 +1,3 @@
-import ramenVideo from "../videos/ramenVideo.mp4";
 import Wave from "react-wavify";
 import { Link } from "react-router-dom"
 export default function Home() {
@@ -11,7 +10,7 @@ export default function Home() {
       // style={{ backgroundImage: `url(${heroImage})` }}
     >
        <video 
-          src={ramenVideo} 
+          src="/videos/ramenVideo.mp4" 
           muted 
           autoPlay
           loop

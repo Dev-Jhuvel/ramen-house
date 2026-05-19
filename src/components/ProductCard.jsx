@@ -1,5 +1,3 @@
-import ramen from "../images/products/ramen.png";
-
 export default function ProductCard({ product, once = false }) {
   return (
     <div
@@ -10,7 +8,7 @@ export default function ProductCard({ product, once = false }) {
       data-aos-delay={500}
     >
       {product.badge && (
-        <div className="absolute bg-red-500 rounded-full size-14 left-15 top-2 border-t-2 z-2">
+        <div className="absolute bg-red-500 rounded-full size-14 left-3 top-2 border-t-2 z-2">
           <span className="text-[7pt] sm:text-[8pt] font-semibold size-full px-1 text-center flex justify-center items-center">
             {product.badge}
           </span>
@@ -20,17 +18,17 @@ export default function ProductCard({ product, once = false }) {
         <figure className="aspect-square overflow-hidden">
           <img
             className="size-full max-w-50 object-cover object-center"
-            src={product.image ?? ramen}
+            src={product.image ?? "/images/ramen.png"}
             alt="product-image"
           />
         </figure>
       </div>
       <div className="flex flex-col px-4 py-2 h-full">
         <div className="text-left flex flex-col gap-1">
-          <h3 className={`text-lg sm:text-2xl font-bold leading-tight`}>
+          <h3 className={`text-lg sm:text-xl font-bold leading-tight`}>
             {product.name}
           </h3>
-          <p className="text-xs sm:text-[14px] leading-tight text-gray-300 line-clamp-3">
+          <p className="text-xs sm:text-[12px] leading-tight text-gray-300 line-clamp-3">
             {product.description}
           </p>
         </div>
@@ -42,7 +40,7 @@ export default function ProductCard({ product, once = false }) {
                 return (
                   <span
                     key={key}
-                    className={`text-[12px] ${colorMap[key]} px-2 py-1 rounded-2xl`}
+                    className={`text-[10px] ${colorMap[key]} px-2 py-1 rounded-2xl`}
                   >
                     {tag}
                   </span>
