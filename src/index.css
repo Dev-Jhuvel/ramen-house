@@ -27,7 +27,7 @@ h2 {
 
 
 h1{
-  @apply text-[clamp(40px,2vw,60px)] text-center font-bold pt-15 pb-5 sm:pb-0
+  @apply text-[clamp(40px,2vw,60px)] text-center font-bold pt-10 pb-5 sm:pb-0
 }
 
 section{
