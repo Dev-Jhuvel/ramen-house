@@ -27,7 +27,7 @@ export default function Products() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:px-4 py-3 h-full">
            {Object.entries(groupedProducts).map(([category, subCats]) => (
             category == "Main" && Object.entries(subCats).slice(0,4).map(([subCategory, items]) => (
-              <div className="flex justify-center items-start border">
+              <div className="flex justify-center items-start">
                 <ProductCard key={subCategory} product={items[0]} />
               </div>
             ))
