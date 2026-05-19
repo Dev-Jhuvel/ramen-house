@@ -16,7 +16,7 @@ export default function ProductCard({ product, once = false }) {
           </span>
         </div>
       )}
-      <div className="flex justify-center border relative overflow-hidden">
+      <div className="flex justify-center relative overflow-hidden border-b">
         <figure className="aspect-[4/3] overflow-hidden">
           <img
             className="size-full max-w-50 object-cover object-center"
@@ -25,12 +25,12 @@ export default function ProductCard({ product, once = false }) {
           />
         </figure>
       </div>
-      <div className="flex flex-col px-4 py-2">
+      <div className="flex flex-col px-4 py-2 h-50">
         <div className="text-left flex flex-col gap-1">
-          <h3 className={`text-lg sm:text-lg font-bold leading-tight`}>
+          <h3 className={`text-lg sm:text-2xl font-bold leading-tight`}>
             {product.name}
           </h3>
-          <p className="text-xs sm:text-[12px] leading-tight text-gray-300 line-clamp-3">
+          <p className="text-xs sm:text-[14px] leading-tight text-gray-300 line-clamp-3">
             {product.description}
           </p>
         </div>
@@ -42,7 +42,7 @@ export default function ProductCard({ product, once = false }) {
                 return (
                   <span
                     key={key}
-                    className={`text-[11px] ${colorMap[key]} px-2 py-1 rounded-2xl`}
+                    className={`text-[12px] ${colorMap[key]} px-2 py-1 rounded-2xl`}
                   >
                     {tag}
                   </span>
@@ -50,7 +50,9 @@ export default function ProductCard({ product, once = false }) {
               })}
           </div>
           <div className="mt-3">
-            
+            <span className="block mt-3 text-sm sm:text-base font-semibold">
+              ${product.price}
+            </span>
           </div>
         </div>
       </div>
