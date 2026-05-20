@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { products } from "../constants";
 import ProductCard from "../components/ProductCard";
 import { Link } from "react-router-dom";
+import ResponsiveMenu from "../components/ResponsiveMenu";
 
 export default function HomePage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -23,8 +24,7 @@ export default function HomePage() {
   // FILTER PRODUCTS
   const filteredProducts = products.filter((product) => {
     const categoryMatch =
-      selectedCategory === "All" ||
-      product.category === selectedCategory;
+      selectedCategory === "All" || product.category === selectedCategory;
 
     const subCategoryMatch =
       selectedSubCategory === "All" ||
@@ -52,83 +52,73 @@ export default function HomePage() {
   }, {});
 
   return (
-    <div className="p-6">
-        <div className="">
-            <div className="flex items-center pb-5 sm:pb-0 justify-end my-3">
-                <Link to="/" className="bg-red-500 text-sm sm:text-base py-2 font-bold px-4 rounded-sm hover:bg-red-400">VIEW OUR SITE</Link>
-            </div>
-            <h1 className="text-center text-lg !pt-0">Our Menu</h1> 
+    <div className="p-6 h-screen">
+      <div className="">
+        <div className="flex items-center pb-5 sm:pb-0 justify-end my-3">
+          <Link
+            to="/"
+            className="bg-red-500 text-sm sm:text-base py-2 font-bold px-4 rounded-sm hover:bg-red-400"
+          >
+            VIEW OUR SITE
+          </Link>
         </div>
+        <h1 className="text-center text-lg/10 !pt-0">Our Menu</h1>
+      </div>
       {/* CATEGORY BUTTONS */}
-      <div className="flex gap-3 mb-4 flex-wrap ml-5">
-        {categories.map((category) => (
-          <button
-            key={category}
-            onClick={() => {
-              setSelectedCategory(category);
-              setSelectedSubCategory("All");
-            }}
-            className={`px-3 py-1 rounded-lg border text-white text-base sm:text-xl font-semibold transition ${
-              selectedCategory === category
-                ? "bg-red-500 border-red-500"
-                : "bg-black border"
-            }`}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
-        <hr />
+      <h3 className="ml-5 text-lg font-black mt-2">Categories:</h3>
+      <ResponsiveMenu
+        categories={categories}
+        selectedCategory={selectedCategory}
+        setSelectedCategory={setSelectedCategory}
+        setSelectedSubCategory={setSelectedSubCategory}
+      />
       {/* SUB CATEGORY BUTTONS */}
-      <div className="flex gap-3 mt-4 mb-8 flex-wrap ml-5">
-        {subCategories.map((subCategory) => (
-          <button
-            key={subCategory}
-            onClick={() => setSelectedSubCategory(subCategory)}
-            className={`px-3 py-1 rounded-lg border text-white text-sm sm:text-lg font-semibold transition ${
-              selectedSubCategory === subCategory
-                ? "bg-red-500 border-red-500"
-                : "bg-black border"
-            }`}
-          >
-            {subCategory}
-          </button>
-        ))}
-      </div>
+      <h3 className="ml-5 font-black">Sub Categories</h3>
+      <ResponsiveMenu
+        categories={subCategories}
+        selectedCategory={selectedSubCategory}
+        setSelectedCategory={setSelectedSubCategory}
+      />
 
       {/* GROUPED PRODUCTS */}
-      <div className="space-y-12 sm:px-10">
-        {Object.entries(groupedProducts).map(
-          ([category, subCategoryGroups]) => (
-            <div key={category}>
-              {/* CATEGORY TITLE */}
-              <h1 className="text-3xl font-bold mb-6 border-b pb-2">
-                {category}
-              </h1>
+      <div className="h-screen w-full overflow-scroll scroll-auto scrollbar-thumb-red-500 scrollbar-gutter-auto bg-gray-900/30">
+        <div className="space-y-12 sm:px-15">
+          {Object.entries(groupedProducts).map(
+            ([category, subCategoryGroups]) => (
+              <div key={category}>
+                {/* CATEGORY TITLE */}
+                <h1 className="text-3xl/10 font-bold mb-2 border-b pb-2">
+                  {category}
+                </h1>
 
-              {/* SUB CATEGORY GROUPS */}
-              {Object.entries(subCategoryGroups).map(
-                ([subCategory, items]) => (
-                  <div key={subCategory} className="mb-10">
-                    {/* SUB CATEGORY TITLE */}
-                    <h2 className="text-2xl font-semibold mb-5 text-red-500">
-                      {subCategory}
-                    </h2>
+                {/* SUB CATEGORY GROUPS */}
+                {Object.entries(subCategoryGroups).map(
+                  ([subCategory, items]) => (
+                    <div key={subCategory} className="mb-10">
+                      {/* SUB CATEGORY TITLE */}
+                      <h2 className="text-2xl font-semibold mb-5 text-red-500">
+                        {subCategory}
+                      </h2>
 
-                    {/* PRODUCTS */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                      {items.map((product) => (
-                        <div className="flex justify-center items-center">
-                          <ProductCard key={product.name} product={product} once={true} />
-                        </div>
-                      ))}
+                      {/* PRODUCTS */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {items.map((product) => (
+                          <div className="flex justify-center items-center">
+                            <ProductCard
+                              key={product.name}
+                              product={product}
+                              once={true}
+                            />
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                )
-              )}
-            </div>
-          )
-        )}
+                  ),
+                )}
+              </div>
+            ),
+          )}
+        </div>
       </div>
     </div>
   );

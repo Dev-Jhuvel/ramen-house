@@ -15,7 +15,7 @@ export default function ProductCard({ product, once = false }) {
         </div>
       )}
       <div className="flex justify-center relative overflow-hidden border-b h-[55%]">
-        <figure className="aspect-square overflow-hidden">
+        <figure className="size-full flex justify-center">
           <img
             className="size-full max-w-50 object-cover object-center"
             src={product.image ?? "/images/ramen.png"}
